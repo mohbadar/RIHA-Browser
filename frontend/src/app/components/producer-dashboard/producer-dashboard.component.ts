@@ -34,7 +34,8 @@ export class ProducerDashboardComponent implements OnInit, DoCheck {
       }, err => {
         this.helper.showError();
         this.loaded = true;
-        let sortProperty = this.gridData.getSortProperty();
+      let params = {'sort': null, 'dir': null, 'page': null};
+      let sortProperty = this.gridData.getSortProperty();
       if (sortProperty) {
         params.sort = sortProperty;
       }
